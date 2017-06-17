@@ -1,1 +1,3 @@
-This is the raw JS for the Google Apps script that I made which allows a Google Form (which I created) to publish to a Google Calendar. Date and time had to be carefully parsed from user input (see utilityFunctions.js), which on the form was geared towards the easiest user interaction (and time options needed to be limited).
+This is the javaScript code for the Google Apps script that I made which allows a Google Form (which I created) to publish to a Google Calendar. Date and time had to be carefully parsed from user input (see utilityFunctions.js), which on the form was geared towards the easiest user interaction (and time options needed to be limited).
+
+The js files need to be copy/pasted into the Google Apps script editor of the Google Sheet that receive the Google Form output. The js files are posted to my github for reference on how to build this kind of app in the google apps script environment.

@@ -1,0 +1,1 @@
+This is the raw JS for the Google Apps script that I made which allows a Google Form (which I created) to publish to a Google Calendar. Date and time had to be carefully parsed from user input (see utilityFunctions.js), which on the form was geared towards the easiest user interaction (and time options needed to be limited).

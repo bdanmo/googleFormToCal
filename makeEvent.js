@@ -17,7 +17,7 @@ function makeEvent(values) {
   Logger.log(start);
   Logger.log(end);
 
-  var calendar = CalendarApp.getCalendarById("nhcs.net_5i8kf8iolof7so6c0ilcddd808@group.calendar.google.com");
+  var calendar = CalendarApp.getCalendarById();//insert your google calendar id here
   calendar.createEvent(
     responseObj.name.toString(),
     new Date(start),

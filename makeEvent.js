@@ -1,32 +1,28 @@
 
 function makeEvent(values) {
   var responseObj = {
-    name: values['Teacher Name'][0],
+    eventName: values['Event Name'][0],
     date: values.Date[0],
-    pickup: values.Pickup[0],
-    dropoff: values.Return[0],
-    num: values.Number[0],
-    location: values.Room[0],
-    activity: values.Activity[0],
-    notes: values.Notes[0]
+    startTime: values.Pickup[0],
+    endTime: values.Return[0],
+    location: values.Location[0],
+    description: values.Notes[0]
   };
 
 
-  var start = makeUTCString(responseObj.date, responseObj.pickup);
-  var end = makeUTCString(responseObj.date, responseObj.dropoff);
+  var start = makeUTCString(responseObj.date, responseObj.startTime);
+  var end = makeUTCString(responseObj.date, responseObj.endTime);
   Logger.log(start);
   Logger.log(end);
 
-  var calendar = CalendarApp.getCalendarById();//insert your google calendar id here
+  var calendar = CalendarApp.getCalendarById();//pass your google cal id as an argument to this function
   calendar.createEvent(
-    responseObj.name.toString(),
+    responseObj.eventName.toString(),
     new Date(start),
     new Date(end),
     {
-      description:
-      responseObj.num + ' iPads.' +
-      ' Activity: ' + responseObj.activity + '.',
-      location: responseObj.location,
+      description: responseObj.description,
+      location: responseObj.location
     }
   );
 }
